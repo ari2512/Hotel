@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace Hotel
 {
-    public partial class Form1 : Form
+    public partial class frm_photo : Form
     {
-        public Form1()
+        public frm_photo()
         {
             InitializeComponent();
         }
+
     }
 }
