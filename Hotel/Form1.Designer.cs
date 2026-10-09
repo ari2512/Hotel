@@ -31,6 +31,7 @@
             this.lbl_titolo = new System.Windows.Forms.Label();
             this.pbx_picture = new System.Windows.Forms.PictureBox();
             this.lbl_presentazione = new System.Windows.Forms.Label();
+            this.lbl_scelte = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_picture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,11 +67,21 @@
             this.lbl_presentazione.TabIndex = 2;
             this.lbl_presentazione.Text = "Benvenuti nel sito del nostro hotel";
             // 
+            // lbl_scelte
+            // 
+            this.lbl_scelte.AutoSize = true;
+            this.lbl_scelte.Location = new System.Drawing.Point(94, 101);
+            this.lbl_scelte.Name = "lbl_scelte";
+            this.lbl_scelte.Size = new System.Drawing.Size(35, 13);
+            this.lbl_scelte.TabIndex = 3;
+            this.lbl_scelte.Text = "label1";
+            // 
             // frm_photo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 467);
+            this.Controls.Add(this.lbl_scelte);
             this.Controls.Add(this.lbl_presentazione);
             this.Controls.Add(this.pbx_picture);
             this.Controls.Add(this.lbl_titolo);
@@ -87,6 +98,7 @@
         private System.Windows.Forms.Label lbl_titolo;
         private System.Windows.Forms.PictureBox pbx_picture;
         private System.Windows.Forms.Label lbl_presentazione;
+        private System.Windows.Forms.Label lbl_scelte;
     }
 }
 
