@@ -17,6 +17,23 @@ namespace Hotel
             InitializeComponent();
         }
 
-       
+        private void btn_prenota_Click(object sender, EventArgs e)
+        {
+            if(cmb_tipostanza.SelectedIndex == null || cmb_stagione.SelectedIndex == null)
+            {
+                MessageBox.Show("Attenzione selezionare il tipo di stanza");
+                return; 
+
+            }
+            else
+            {
+                int giorni = Convert.ToInt32(txt_ngiorni.Text);
+                string stagione= cmb_stagione.SelectedItem.ToString();
+                string stanza = cmb_tipostanza.SelectedItem.ToString();
+               
+            }
+        }
+
+        
     }
 }
