@@ -19,21 +19,68 @@ namespace Hotel
 
         private void btn_prenota_Click(object sender, EventArgs e)
         {
-            if(cmb_tipostanza.SelectedIndex == null || cmb_stagione.SelectedIndex == null)
+            if (cmb_tipostanza.SelectedIndex == null || cmb_stagione.SelectedIndex == null)
             {
                 MessageBox.Show("Attenzione selezionare il tipo di stanza");
-                return; 
+                return;
 
             }
             else
             {
                 int giorni = Convert.ToInt32(txt_ngiorni.Text);
-                string stagione= cmb_stagione.SelectedItem.ToString();
+                string stagione = cmb_stagione.SelectedItem.ToString();
                 string stanza = cmb_tipostanza.SelectedItem.ToString();
-               
-            }
-        }
+                int costoGiornaliero = Convert.ToInt32(txt_ngiorni.Text);
 
-        
+
+                if (stagione == "bassa stagione")
+                {
+                    if (stanza == "bassa")
+                    {
+                        costoGiornaliero = 15;
+                    }
+                    else if (stanza == "media")
+                    {
+                        costoGiornaliero = 30;
+                    }
+                    else if (stanza == " alta")
+                    {
+                        costoGiornaliero = 45;
+                    }
+                }
+                if (stagione == " media stagione")
+                {
+                    if (stanza == " bassa")
+                    {
+                        costoGiornaliero = 20;
+                    }
+                    else if (stanza == " media")
+                    {
+                        costoGiornaliero = 35;
+                    }
+                    else if (stanza == " alta")
+                    {
+                        costoGiornaliero = 50;
+                    }
+                }
+                if (stagione == " alta stagione")
+                {
+                    if (stanza == " bassa")
+                    {
+                        costoGiornaliero = 25;
+                    }
+                    else if (stanza == " media")
+                    {
+                        costoGiornaliero = 40;
+                    }
+                    else if (stanza == " alta")
+                    {
+                        costoGiornaliero = 55;
+                    }
+                }
+            }
+
+
+        }
     }
 }

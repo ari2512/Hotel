@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lbl_titolo = new System.Windows.Forms.Label();
-            this.pbx_picture = new System.Windows.Forms.PictureBox();
             this.lbl_presentazione = new System.Windows.Forms.Label();
             this.lbl_scelte = new System.Windows.Forms.Label();
             this.lbl_sottotitolo = new System.Windows.Forms.Label();
@@ -43,6 +42,13 @@
             this.lbl_total = new System.Windows.Forms.Label();
             this.btn_prenota = new System.Windows.Forms.Button();
             this.cmb_stagione = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbx_picture = new System.Windows.Forms.PictureBox();
+            this.btn_istruzioni = new System.Windows.Forms.Button();
+            this.lbl_info = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_picture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,30 +57,20 @@
             this.lbl_titolo.AutoSize = true;
             this.lbl_titolo.Font = new System.Drawing.Font("MS Mincho", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_titolo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbl_titolo.Location = new System.Drawing.Point(184, 16);
+            this.lbl_titolo.Location = new System.Drawing.Point(-5, 9);
             this.lbl_titolo.Name = "lbl_titolo";
             this.lbl_titolo.Size = new System.Drawing.Size(420, 48);
             this.lbl_titolo.TabIndex = 0;
             this.lbl_titolo.Text = "HOTEL CONCHIGLIA";
             // 
-            // pbx_picture
-            // 
-            this.pbx_picture.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.pbx_picture.Image = global::Hotel.Properties.Resources.hotel_presidente_4s;
-            this.pbx_picture.Location = new System.Drawing.Point(621, 1);
-            this.pbx_picture.Name = "pbx_picture";
-            this.pbx_picture.Size = new System.Drawing.Size(337, 211);
-            this.pbx_picture.TabIndex = 1;
-            this.pbx_picture.TabStop = false;
-            // 
             // lbl_presentazione
             // 
             this.lbl_presentazione.AutoSize = true;
-            this.lbl_presentazione.Font = new System.Drawing.Font("MingLiU-ExtB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_presentazione.Font = new System.Drawing.Font("MingLiU-ExtB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_presentazione.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbl_presentazione.Location = new System.Drawing.Point(225, 64);
+            this.lbl_presentazione.Location = new System.Drawing.Point(12, 57);
             this.lbl_presentazione.Name = "lbl_presentazione";
-            this.lbl_presentazione.Size = new System.Drawing.Size(287, 15);
+            this.lbl_presentazione.Size = new System.Drawing.Size(287, 16);
             this.lbl_presentazione.TabIndex = 2;
             this.lbl_presentazione.Text = "Benvenuti nel sito del nostro hotel";
             // 
@@ -92,7 +88,7 @@
             // 
             this.lbl_sottotitolo.AutoSize = true;
             this.lbl_sottotitolo.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_sottotitolo.Location = new System.Drawing.Point(0, 104);
+            this.lbl_sottotitolo.Location = new System.Drawing.Point(0, 101);
             this.lbl_sottotitolo.Name = "lbl_sottotitolo";
             this.lbl_sottotitolo.Size = new System.Drawing.Size(455, 13);
             this.lbl_sottotitolo.TabIndex = 4;
@@ -173,17 +169,17 @@
             // lbl_total
             // 
             this.lbl_total.AutoSize = true;
-            this.lbl_total.Font = new System.Drawing.Font("MingLiU_MSCS-ExtB", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_total.Location = new System.Drawing.Point(12, 301);
+            this.lbl_total.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_total.Location = new System.Drawing.Point(6, 301);
             this.lbl_total.Name = "lbl_total";
-            this.lbl_total.Size = new System.Drawing.Size(103, 11);
+            this.lbl_total.Size = new System.Drawing.Size(140, 18);
             this.lbl_total.TabIndex = 16;
             this.lbl_total.Text = "SPESA TOTALE: ";
             // 
             // btn_prenota
             // 
-            this.btn_prenota.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_prenota.Location = new System.Drawing.Point(12, 317);
+            this.btn_prenota.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_prenota.Location = new System.Drawing.Point(9, 322);
             this.btn_prenota.Name = "btn_prenota";
             this.btn_prenota.Size = new System.Drawing.Size(131, 39);
             this.btn_prenota.TabIndex = 17;
@@ -205,12 +201,68 @@
             this.cmb_stagione.TabIndex = 18;
             this.cmb_stagione.Text = "Seleziona";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Hotel.Properties.Resources.come_realizzare_un_bagno_per_hotel_di_lusso;
+            this.pictureBox2.Location = new System.Drawing.Point(739, 195);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(230, 173);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 20;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Hotel.Properties.Resources.PHZ_4750_;
+            this.pictureBox1.Location = new System.Drawing.Point(527, 171);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(248, 159);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pbx_picture
+            // 
+            this.pbx_picture.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.pbx_picture.Image = global::Hotel.Properties.Resources.hotel_presidente_4s;
+            this.pbx_picture.Location = new System.Drawing.Point(627, 2);
+            this.pbx_picture.Name = "pbx_picture";
+            this.pbx_picture.Size = new System.Drawing.Size(333, 211);
+            this.pbx_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx_picture.TabIndex = 1;
+            this.pbx_picture.TabStop = false;
+            // 
+            // btn_istruzioni
+            // 
+            this.btn_istruzioni.BackColor = System.Drawing.Color.Red;
+            this.btn_istruzioni.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_istruzioni.Location = new System.Drawing.Point(896, 374);
+            this.btn_istruzioni.Name = "btn_istruzioni";
+            this.btn_istruzioni.Size = new System.Drawing.Size(64, 55);
+            this.btn_istruzioni.TabIndex = 21;
+            this.btn_istruzioni.Text = "?";
+            this.btn_istruzioni.UseVisualStyleBackColor = false;
+            // 
+            // lbl_info
+            // 
+            this.lbl_info.AutoSize = true;
+            this.lbl_info.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_info.Location = new System.Drawing.Point(679, 397);
+            this.lbl_info.Name = "lbl_info";
+            this.lbl_info.Size = new System.Drawing.Size(211, 16);
+            this.lbl_info.TabIndex = 22;
+            this.lbl_info.Text = "Cliccare per ricevere ulteriori info→";
+            // 
             // frm_photo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(961, 565);
+            this.Controls.Add(this.lbl_info);
+            this.Controls.Add(this.btn_istruzioni);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cmb_stagione);
             this.Controls.Add(this.btn_prenota);
             this.Controls.Add(this.lbl_total);
@@ -228,6 +280,8 @@
             this.Controls.Add(this.lbl_titolo);
             this.Name = "frm_photo";
             this.Text = "WWW.HOTELCONCHIGLIA";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_picture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -251,6 +305,10 @@
         private System.Windows.Forms.Label lbl_total;
         private System.Windows.Forms.Button btn_prenota;
         private System.Windows.Forms.ComboBox cmb_stagione;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btn_istruzioni;
+        private System.Windows.Forms.Label lbl_info;
     }
 }
 

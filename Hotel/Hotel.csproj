@@ -86,5 +86,11 @@
   <ItemGroup>
     <None Include="Resources\caption.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PHZ_4750_.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\come-realizzare-un-bagno-per-hotel-di-lusso.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

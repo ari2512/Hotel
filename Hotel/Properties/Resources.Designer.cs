@@ -73,9 +73,29 @@ namespace Hotel.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap come_realizzare_un_bagno_per_hotel_di_lusso {
+            get {
+                object obj = ResourceManager.GetObject("come-realizzare-un-bagno-per-hotel-di-lusso", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hotel_presidente_4s {
             get {
                 object obj = ResourceManager.GetObject("hotel-presidente-4s", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PHZ_4750_ {
+            get {
+                object obj = ResourceManager.GetObject("PHZ_4750_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
