@@ -129,14 +129,13 @@ namespace Hotel
             }
         }
 
-
-
         private void btn_istruzioni_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Benvenuto nella pagina dell'Hotel Conchiglia\r\nSotto vi riporto tutte le procedure per fare una prenotazione all' interno del nostro hotel\r\n1) selezionare il tipo di stagione che si desidera prenotare\r\n2) selezionare il tipo di stanza che preferisce\r\n3) selezionare il numero di giorni che desidera trascorrere nel nostro hotel \r\n4) mettere la spunta nel riquadro se desidera usufruire il servizio parcheggio\r\n5) premere il tasto PRENOTA dove sarà riportato il prezzo totale di tutta il soggiorno");
+            MessageBox.Show("Benvenuto nella pagina dell'Hotel Conchiglia\r\nSotto vi riporto tutte le procedure per fare una prenotazione all' interno del nostro hotel\r\n1) selezionare il tipo di stagione che si desidera prenotare\r\n2) selezionare il tipo di stanza che preferisce\r\n3) selezionare il numero di giorni che desidera trascorrere nel nostro hotel \r\n 4) mettere la spunta nel riquadro se desidera usufruire il servizio parcheggio\r\n5) premere il tasto PRENOTA dove sarà riportato il prezzo totale di tutta il soggiorno");
 
         }
     }
+    
 }
 
             

@@ -241,6 +241,7 @@
             this.btn_istruzioni.TabIndex = 21;
             this.btn_istruzioni.Text = "?";
             this.btn_istruzioni.UseVisualStyleBackColor = false;
+            this.btn_istruzioni.Click += new System.EventHandler(this.btn_istruzioni_Click);
             // 
             // lbl_info
             // 
