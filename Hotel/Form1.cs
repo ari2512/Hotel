@@ -35,47 +35,47 @@ namespace Hotel
 
 
 
-                if (stagione == "bassa stagione")
+                if (stagione == "BASSA STAGIONE (BS)")
                 {
-                    if (stanza == "bassa")
+                    if (stanza == "BASE (B)")
                     {
                         costoGiornaliero = 15;
                     }
-                    else if (stanza == "media")
+                    else if (stanza == "MEDIUM (M)")
                     {
                         costoGiornaliero = 30;
                     }
-                    else if (stanza == " alta")
+                    else if (stanza == "ALTA (A)")
                     {
                         costoGiornaliero = 45;
                     }
                 }
-                if (stagione == " media stagione")
+                if (stagione == "MEDIA STAGIONE (MS)")
                 {
-                    if (stanza == " bassa")
+                    if (stanza == "BASE (B)")
                     {
                         costoGiornaliero = 20;
                     }
-                    else if (stanza == " media")
+                    else if (stanza == "MEDIUM (M)")
                     {
                         costoGiornaliero = 35;
                     }
-                    else if (stanza == " alta")
+                    else if (stanza == "ALTA (A)")
                     {
                         costoGiornaliero = 50;
                     }
                 }
-                if (stagione == " alta stagione")
+                if (stagione == "ALTA STAGIONE (AS)")
                 {
-                    if (stanza == " bassa")
+                    if (stanza == "BASE (B)")
                     {
                         costoGiornaliero = 25;
                     }
-                    else if (stanza == " media")
+                    else if (stanza == "MEDIUM (M)")
                     {
                         costoGiornaliero = 40;
                     }
-                    else if (stanza == " alta")
+                    else if (stanza == "ALTA (A)")
                     {
                         costoGiornaliero = 55;
                     }
@@ -123,28 +123,23 @@ namespace Hotel
 
                     double prezzoTotale = costoStanza + costoParcheggio;
                     lbl_total.Text = "spesa totale: " + prezzoTotale;
+                    MessageBox.Show("Totale : " + prezzoTotale);
 
                 }
             }
-        }       
-            
+        }
 
 
-    private void btn_istruzioni_Click(object sender, EventArgs e)
-              {
-             string infoHotel = "Benvenuto nella pagina dell'Hotel Conchiglia\n" +
-                 "Sotto vi riporto tutte le procedure per fare una prenotazione all' interno del nostro hotel:\n" +
-                  "1) selezionare il tipo di stagione che si desidera prenotare\n" +
-                 "2) selezionare il tipo di stanza che preferisce\n" +
-                 "3) selezionare il numero di giorni che desidera trascorrere nel nostro hotel\n" +
-                 "4) mettere la spunta nel riquadro se desidera usufruire il servizio parcheggio\n" +
-                 "5) premere il tasto PRENOTA dove sarà riportato il prezzo totale di tutta il soggiorno\n";
 
-            MessageBox.Show(infoHotel, "informazioni ulteriori", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        private void btn_istruzioni_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Benvenuto nella pagina dell'Hotel Conchiglia\r\nSotto vi riporto tutte le procedure per fare una prenotazione all' interno del nostro hotel\r\n1) selezionare il tipo di stagione che si desidera prenotare\r\n2) selezionare il tipo di stanza che preferisce\r\n3) selezionare il numero di giorni che desidera trascorrere nel nostro hotel \r\n4) mettere la spunta nel riquadro se desidera usufruire il servizio parcheggio\r\n5) premere il tasto PRENOTA dove sarà riportato il prezzo totale di tutta il soggiorno");
+
         }
     }
+}
 
-            }
+            
 
 
         
