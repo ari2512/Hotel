@@ -152,18 +152,17 @@
             this.lbl_servizio.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_servizio.Location = new System.Drawing.Point(0, 270);
             this.lbl_servizio.Name = "lbl_servizio";
-            this.lbl_servizio.Size = new System.Drawing.Size(273, 13);
+            this.lbl_servizio.Size = new System.Drawing.Size(320, 13);
             this.lbl_servizio.TabIndex = 13;
-            this.lbl_servizio.Text = "Usufruire del servizio del parcheggio?";
+            this.lbl_servizio.Text = "Usufruire del servizio del parcheggio?(5 €/g)";
             // 
             // chk_si
             // 
             this.chk_si.AutoSize = true;
-            this.chk_si.Location = new System.Drawing.Point(273, 271);
+            this.chk_si.Location = new System.Drawing.Point(326, 270);
             this.chk_si.Name = "chk_si";
-            this.chk_si.Size = new System.Drawing.Size(36, 17);
+            this.chk_si.Size = new System.Drawing.Size(15, 14);
             this.chk_si.TabIndex = 14;
-            this.chk_si.Text = "SI";
             this.chk_si.UseVisualStyleBackColor = true;
             // 
             // lbl_total

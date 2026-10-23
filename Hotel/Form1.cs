@@ -19,7 +19,7 @@ namespace Hotel
 
         private void btn_prenota_Click(object sender, EventArgs e)
         {
-            if (cmb_tipostanza.SelectedIndex == null || cmb_stagione.SelectedIndex == null)
+            if (cmb_tipostanza.SelectedItem == null || cmb_stagione.SelectedItem == null)
             {
                 MessageBox.Show("Attenzione selezionare il tipo di stanza");
                 return;
@@ -31,6 +31,8 @@ namespace Hotel
                 string stagione = cmb_stagione.SelectedItem.ToString();
                 string stanza = cmb_tipostanza.SelectedItem.ToString();
                 int costoGiornaliero = Convert.ToInt32(txt_ngiorni.Text);
+                float prezzoTot = 0;
+
 
 
                 if (stagione == "bassa stagione")
@@ -77,10 +79,75 @@ namespace Hotel
                     {
                         costoGiornaliero = 55;
                     }
+                    double costoStanza = 0;
+                    if (giorni <= 0)
+                    {
+                        MessageBox.Show("I parametri non sono validi");
+
+                    }
+                    else if (giorni >= 7)
+                    {
+                        prezzoTot = prezzoTot - (prezzoTot * 35 / 100);
+                    }
+                    else if (giorni >= 3)
+                    {
+                        prezzoTot = prezzoTot - (prezzoTot * 25 / 100);
+                    }
+                    if (chk_si.Checked)
+                    {
+                        prezzoTot = prezzoTot + (5 * giorni);
+                    }
+
+                    if (giorni <= 0)
+                    {
+                        MessageBox.Show("i dati inseriti non sono corretti, riprova");
+                    }
+                    else if (giorni <= 2)
+                    {
+                        costoStanza += costoGiornaliero * giorni;
+                    }
+                    else if (giorni <= 7)
+                    {
+                        costoStanza += (costoGiornaliero * giorni) * 0.75;
+                    }
+                    else
+                    {
+                        costoStanza += (costoGiornaliero * giorni) * 0.65;
+                    }
+
+                    double costoParcheggio = 0;
+                    if (chk_si.Checked)
+                    {
+                        costoParcheggio = 5 * giorni;
+                    }
+
+                    double prezzoTotale = costoStanza + costoParcheggio;
+                    lbl_total.Text = "spesa totale: " + prezzoTotale;
+
                 }
+            }
+        }       
+            
+
+
+    private void btn_istruzioni_Click(object sender, EventArgs e)
+              {
+             string infoHotel = "Benvenuto nella pagina dell'Hotel Conchiglia\n" +
+                 "Sotto vi riporto tutte le procedure per fare una prenotazione all' interno del nostro hotel:\n" +
+                  "1) selezionare il tipo di stagione che si desidera prenotare\n" +
+                 "2) selezionare il tipo di stanza che preferisce\n" +
+                 "3) selezionare il numero di giorni che desidera trascorrere nel nostro hotel\n" +
+                 "4) mettere la spunta nel riquadro se desidera usufruire il servizio parcheggio\n" +
+                 "5) premere il tasto PRENOTA dove sarà riportato il prezzo totale di tutta il soggiorno\n";
+
+            MessageBox.Show(infoHotel, "informazioni ulteriori", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+    }
+
             }
 
 
-        }
-    }
-}
+        
+     
+
+
